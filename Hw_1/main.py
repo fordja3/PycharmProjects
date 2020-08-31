@@ -8,6 +8,11 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = '12345'
 bootstrap = Bootstrap(app)
 
+## before running, make sure to...
+## . /bin/activate ## to enter venv  
+## export FLASK_APP=main.py ## to set the FLASK_APP variable to this file
+## export FLASK_ENV=development ## to set the environment to 'development'
+## python -m flask run ## to run after setting venv and variables
 
 class name_form(FlaskForm):
     name = StringField('Enter your name: ', validators=[DataRequired()])
