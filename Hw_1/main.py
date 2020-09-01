@@ -14,6 +14,7 @@ bootstrap = Bootstrap(app)
 ##  export FLASK_APP=main.py  ## to set the FLASK_APP variable to this file
 ##  export FLASK_ENV=development  ## to set the environment to 'development'
 ##  python -m flask run  ## to run after setting venv and variables
+##  OR ##  sh run.sh  ## in venv
 
 class name_form(FlaskForm):
     name = StringField('Enter your name: ', validators=[DataRequired()])
