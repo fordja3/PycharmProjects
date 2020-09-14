@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask, render_template, redirect, url_for, jsonify, json
 from flask_bootstrap import Bootstrap
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
@@ -47,9 +47,11 @@ def about():
 def contact():
     return render_template("contact.html")
 
+@app.route("/info")
+def info():
+    response =  json.load(info)
+    return response
+
     
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=80, debug=True)
-
-
-
